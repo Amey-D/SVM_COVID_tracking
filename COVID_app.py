@@ -244,12 +244,12 @@ def plot_county(county):
     plt.tight_layout(rect=[0, 0.03, 1, 0.95])
     st.pyplot()
     
-    import streamlit.components.v1 as components
-    if len(county)<=3:
-        for C in county:
-            st.text(C)
-            f = FIPSs[FIPSs.County == C].FIPS.values[0]
-            components.iframe("https://covidactnow.org/embed/us/county/"+f, width=350, height=365, scrolling=False)
+    # import streamlit.components.v1 as components
+    # if len(county)<=3:
+    #    for C in county:
+    #        st.text(C)
+    #        f = FIPSs[FIPSs.County == C].FIPS.values[0]
+    #        components.iframe("https://covidactnow.org/embed/us/county/"+f, width=350, height=365, scrolling=False)
         
 @st.cache
 def get_data():
